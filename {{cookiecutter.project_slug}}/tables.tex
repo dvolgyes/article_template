@@ -1,0 +1,14 @@
+\newcommand{\tableI}[1]{
+    \begin{table}
+        \begin{center}
+        \caption{Caption text}
+{%- raw %}
+        \label{#1}
+{%- endraw %}
+        \begin{tabular}{|c|c|}
+            Variable & Value \\
+            $\alpha$ & 0.1
+        \end{tabular}
+        \end{center}
+    \end{table}
+}

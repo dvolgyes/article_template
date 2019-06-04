@@ -1,0 +1,51 @@
+\documentclass{
+{{- cookiecutter.document_class -}}
+}
+\usepackage[utf8]{inputenc}
+{%- if cookiecutter.style != 'none' %}
+\usepackage{
+{{- cookiecutter.style -}}
+} % custom style sheet, downloaded from
+{%- endif %}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{textcomp}
+%
+%  {{cookiecutter.corresponding_author_name}}
+%  {{cookiecutter.corresponding_author_email}}
+%
+
+{%- raw %}
+\graphicspath{{./}{figs/}}
+{%- endraw %}
+
+\input{commands.tex}
+\input{figures.tex}
+\input{tables.tex}
+
+\title{ {{- cookiecutter.title -}} }
+
+\author{ {{- cookiecutter.corresponding_author_name }}
+\thanks{corresponding author}
+}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\input{abstract.tex}
+\end{abstract}
+
+\input{main.tex}
+
+\bibliography{references}
+\bibliographystyle{
+{{- cookiecutter.bibliography_style -}}
+}
+
+\end{document}

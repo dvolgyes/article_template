@@ -1,0 +1,17 @@
+{
+"project_name": "latex article",
+"project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+"document_class": ["article","report","book"],
+"title": "working title",
+"corresponding_author_name": "first family",
+"corresponding_author_email": "valid_email@example.com",
+"username": "user",
+"git_backend": ["github","gitlab", "bitbucket", "uio", "none"],
+"gitlatexdiff": "git-latexdiff",
+"gitlatexdiff_options": "--quiet --ignore-latex-errors --ignore-makefile",
+"tex_engine": "pdflatex",
+"bib_engine": "bibtex",
+"online_gitignore": "y",
+"style": ["arxiv", "nips_2018", "none"],
+"bibliography_style": ["ieeetr","plainnat", "natbib"]
+}

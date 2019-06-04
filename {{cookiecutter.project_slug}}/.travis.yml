@@ -1,0 +1,15 @@
+language: python
+python:
+  - "3.6"
+  - "3.7"
+
+install:
+  - pip install -r requirements.txt
+
+script:
+  - cookiecutter latex-template  -o . --no-input
+  - make -C latex_article 
+  - make -C latex_article submission
+
+
+
