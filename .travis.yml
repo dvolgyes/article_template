@@ -14,5 +14,3 @@ install:
 
 script:
   - cookiecutter https://github.com/dvolgyes/article_template  -o . --no-input
-  - make -C latex_article 
-  - make -C latex_article submission
